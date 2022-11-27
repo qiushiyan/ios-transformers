@@ -29,9 +29,9 @@ struct ChatView: View {
                             proxy.scrollTo(id, anchor: .bottom)
                         }
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             MessageField()
                 .environmentObject(messagesManager)

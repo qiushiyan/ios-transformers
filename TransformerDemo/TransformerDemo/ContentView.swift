@@ -21,7 +21,7 @@ struct ContentView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "paintpalette.fill")
-                        Text("Image")
+                        Text("Paint")
                     }
                 }
             QAView()

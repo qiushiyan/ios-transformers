@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1904C90F48A0218049367B00 /* Pods_TransformerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B56E5268D2D654B5CBE321 /* Pods_TransformerDemo.framework */; };
 		2880428929318DFC00BC21C1 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880428829318DFC00BC21C1 /* MessageManager.swift */; };
+		2880428C29331A4C00BC21C1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880428B29331A4C00BC21C1 /* Line.swift */; };
+		288042902933295500BC21C1 /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880428F2933295500BC21C1 /* DrawingManager.swift */; };
+		288042922933308F00BC21C1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042912933308F00BC21C1 /* UIImage.swift */; };
+		28804295293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 28804294293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel */; };
 		28D50D74293166AB007CC76F /* TransformerDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D50D73293166AB007CC76F /* TransformerDemoApp.swift */; };
 		28D50D76293166AB007CC76F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D50D75293166AB007CC76F /* ContentView.swift */; };
 		28D50D78293166AC007CC76F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D50D77293166AC007CC76F /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		2880428829318DFC00BC21C1 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		2880428B29331A4C00BC21C1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		2880428F2933295500BC21C1 /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
+		288042912933308F00BC21C1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		28804294293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = UpdatableDrawingClassifier.mlmodel; path = ../../../../../Downloads/UpdatableDrawingClassifier.mlmodel; sourceTree = "<group>"; };
 		28D50D70293166AB007CC76F /* TransformerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransformerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D50D73293166AB007CC76F /* TransformerDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerDemoApp.swift; sourceTree = "<group>"; };
 		28D50D75293166AB007CC76F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,8 +82,17 @@
 			isa = PBXGroup;
 			children = (
 				2880428829318DFC00BC21C1 /* MessageManager.swift */,
+				2880428F2933295500BC21C1 /* DrawingManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		2880428A29331A3C00BC21C1 /* DrawingPad */ = {
+			isa = PBXGroup;
+			children = (
+				2880428B29331A4C00BC21C1 /* Line.swift */,
+			);
+			path = DrawingPad;
 			sourceTree = "<group>";
 		};
 		28D50D67293166AB007CC76F = {
@@ -108,6 +125,7 @@
 				28D50D75293166AB007CC76F /* ContentView.swift */,
 				28D50D77293166AC007CC76F /* Assets.xcassets */,
 				28D50DA229318982007CC76F /* GoogleService-Info.plist */,
+				28804294293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel */,
 				28D50D79293166AC007CC76F /* Preview Content */,
 			);
 			path = TransformerDemo;
@@ -126,6 +144,7 @@
 		28D50D81293167BF007CC76F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2880428A29331A3C00BC21C1 /* DrawingPad */,
 				28D50D94293176F4007CC76F /* Chat */,
 			);
 			path = Models;
@@ -196,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				28D50D9C293180D9007CC76F /* CornerRadius.swift */,
+				288042912933308F00BC21C1 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,9 +346,13 @@
 			files = (
 				28D50D76293166AB007CC76F /* ContentView.swift in Sources */,
 				28D50D87293167F6007CC76F /* ChatView.swift in Sources */,
+				28804295293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel in Sources */,
 				28D50D74293166AB007CC76F /* TransformerDemoApp.swift in Sources */,
 				28D50D9A293177EA007CC76F /* Chat.swift in Sources */,
 				28D50D8A29316924007CC76F /* DrawingPadView.swift in Sources */,
+				288042922933308F00BC21C1 /* UIImage.swift in Sources */,
+				288042902933295500BC21C1 /* DrawingManager.swift in Sources */,
+				2880428C29331A4C00BC21C1 /* Line.swift in Sources */,
 				28D50D982931778D007CC76F /* MessageBubble.swift in Sources */,
 				2880428929318DFC00BC21C1 /* MessageManager.swift in Sources */,
 				28D50D9D293180D9007CC76F /* CornerRadius.swift in Sources */,
