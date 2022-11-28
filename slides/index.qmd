@@ -1,0 +1,130 @@
+## Why developing models for mobile devices
+
+- Develop mechanical sympathy and understand the real use cases
+
+- Crowd-source training data, e.g. image recognition
+
+## How to integrate transformers into mobile devices
+
+Depending on where the model is:
+
+- [server-based]{.yellow}: model is located on an enterprise server
+
+- [client-based]{.yellow}: model is built into the user's device
+
+
+## Demo: server-based GPT3 chatbot
+
+:::: {.columns}
+::: {.column width='30%'}
+
+![](./images/gpt3.png){height="600px"}
+:::
+::: {.column width='60%'}
+
+![](./images/server.png)
+
+:::
+::::
+
+
+## Making API requests
+
+[Python API Server]{.yellow}
+
+```{.python filename='server.py' code-line-numbers="|2-3|15-16|19-20"}
+import openai
+def reply(prompt: str):
+     response = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        temperature=0.3,
+        max_tokens=60,
+        top_p=1.0,
+        frequency_penalty=0.5,
+        presence_penalty=0.0,
+        stop=["You:"],
+    )
+    return response["choices"][0]["text"].strip()
+
+@app.post("/chat")
+def gpt3_reply(prompt: str):
+    all_messages = get_all_messages()
+    prompt = "\n".join(all_messages)
+    reply = reply(prompt)
+    return {"text": reply}
+```
+
+
+[IOS app]{.yellow}
+
+```{.swift filename="client.swift"}
+AF.request("http://localhost:8000/chat", method: .post).responseData { response in
+    add_message(response.text)
+}
+```
+
+## Pros & Cons of the client-server approach
+
+[Pros]{.yellow}
+
+- Easy to implement and reason about
+
+- Universal to any language, frameworks and models
+
+
+[Cons]{.yellow}
+
+- Limited usage in areas with insuffcient international bandwidth
+
+- Additional codebase, infrastructure, and maintenance
+
+## Alternative: built-in model in the client
+
+Apple provids the [[Core ML]{.yellow}](https://developer.apple.com/documentation/coreml) framework for transforming common machine learning models into a `.mlmodel` format that can be built directly into an IOS app's bundle.
+
+![](https://files.readme.io/d2229ff-core-ml-tools-front-page.png)
+
+
+## Transforming BERT into `.mlmodel`
+
+
+```{.python filename="transform-bert.py" code-line-numbers="|1|6-9|16-17"}
+import coremltools as ct
+import numpy as np
+import tensorflow as tf
+from transformers import DistilBertTokenizer, TFDistilBertForMaskedLM
+
+tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased-distilled-squad")
+distilbert_model = TFDistilBertForMaskedLM.from_pretrained(
+    "distilbert-base-uncased-distilled-squad"
+)
+
+input_shape = (1, 20)
+input_layer = tf.keras.layers.Input(shape=input_shape[1:], dtype=tf.int32, name="input")
+prediction_model = distilbert_model(input_layer)
+tf_model = tf.keras.models.Model(inputs=input_layer, outputs=prediction_model)
+
+mlmodel = ct.convert(tf_model)
+mlmodel.save("distilbert.mlmodel")
+```
+
+::: {.fragment .fade-up}
+```{r}
+knitr::include_graphics("images/bert.png")
+```
+:::
+
+## Demo: client-based Q&A system using BERT
+
+
+```{r}
+#| fig-align: center
+knitr::include_graphics("images/QA.png")
+```
+
+
+
+
+
+

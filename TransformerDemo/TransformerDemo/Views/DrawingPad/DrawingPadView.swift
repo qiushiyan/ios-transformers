@@ -14,6 +14,7 @@ struct DrawingPadView: View {
     @State private var lines: [Line] = []
     @State private var thickness: Double = 1.0
     @State private var color = Color.white
+    @State private var imageState: UIImage?
     @StateObject private var drawingManager = DrawingManager()
     private var pad: some View {
         return Canvas { context, _ in
@@ -40,21 +41,36 @@ struct DrawingPadView: View {
     var body: some View {
         VStack {
             HStack {
-                Button(action: { self.lines = [] }) {
+                Button(action: {
+                    self.lines = []
+                    drawingManager.clearResult()
+                }) {
                     Text("Clear").font(.title2).fontWeight(.bold)
                 }
                 if let result = drawingManager.result {
+                    Spacer()
                     Text(result)
+                        .foregroundColor(Color("Info"))
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    Spacer()
                 } else {
                     Spacer()
                 }
                 Button("Classify") {
-                    let renderer = ImageRenderer(content: pad)
+                    let renderer = ImageRenderer(
+                        content: pad
+                            .padding()
+                            .background(.black)
+                            .frame(width: 400, height: 600)
+                    )
                     if let image = renderer.uiImage {
                         drawingManager.classify(image)
                     }
                 }.font(.title2).fontWeight(.bold)
-            }.padding(.horizontal, 40)
+            }
+            .padding(.horizontal, 40)
+            .frame(maxWidth: .infinity)
 
             Spacer()
 

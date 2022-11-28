@@ -29,7 +29,6 @@ struct MessageField: View {
                     .cornerRadius(50)
             }
         }
-        .padding(10)
         .padding(.horizontal, 20)
         .background(Color("Background"))
         .cornerRadius(50)
@@ -56,7 +55,7 @@ struct CustomTextField: View {
             if text.isEmpty {
                 placeholder.opacity(0.5)
             }
-            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+            TextField("", text: $text, axis: .vertical)
                 .foregroundColor(.white)
         }
     }

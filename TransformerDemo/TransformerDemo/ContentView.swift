@@ -17,18 +17,18 @@ struct ContentView: View {
                         Text("GPT3")
                     }
                 }
-            DrawingPadView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "paintpalette.fill")
-                        Text("Paint")
-                    }
-                }
             QAView()
                 .tabItem {
                     VStack {
                         Image(systemName: "questionmark.circle.fill")
                         Text("Q & A")
+                    }
+                }
+            DrawingPadView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "paintpalette.fill")
+                        Text("Paint")
                     }
                 }
         }

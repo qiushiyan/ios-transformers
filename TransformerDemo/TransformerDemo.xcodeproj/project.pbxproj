@@ -12,7 +12,19 @@
 		2880428C29331A4C00BC21C1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880428B29331A4C00BC21C1 /* Line.swift */; };
 		288042902933295500BC21C1 /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880428F2933295500BC21C1 /* DrawingManager.swift */; };
 		288042922933308F00BC21C1 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042912933308F00BC21C1 /* UIImage.swift */; };
-		28804295293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 28804294293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel */; };
+		288042B02934139200BC21C1 /* UpdatableDrawingClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 288042AF2934139200BC21C1 /* UpdatableDrawingClassifier.mlmodel */; };
+		288042BA2934143600BC21C1 /* BERT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042B42934143600BC21C1 /* BERT.swift */; };
+		288042BB2934143600BC21C1 /* BERTInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042B52934143600BC21C1 /* BERTInput.swift */; };
+		288042BC2934143600BC21C1 /* bert-base-uncased-vocab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 288042B62934143600BC21C1 /* bert-base-uncased-vocab.txt */; };
+		288042BD2934143600BC21C1 /* BERTOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042B72934143600BC21C1 /* BERTOutput.swift */; };
+		288042BE2934143600BC21C1 /* BERTVocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042B82934143600BC21C1 /* BERTVocabulary.swift */; };
+		288042BF2934143600BC21C1 /* TokenizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042B92934143600BC21C1 /* TokenizedString.swift */; };
+		288042C3293416FD00BC21C1 /* BERTSQUADFP16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 288042C2293416FD00BC21C1 /* BERTSQUADFP16.mlmodel */; };
+		288042C62934742A00BC21C1 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042C52934742A00BC21C1 /* ScannerView.swift */; };
+		288042C92934747200BC21C1 /* ScannedDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042C82934747200BC21C1 /* ScannedDocument.swift */; };
+		288042CB2934755400BC21C1 /* OCRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042CA2934755400BC21C1 /* OCRManager.swift */; };
+		288042CD29347A5F00BC21C1 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042CC29347A5F00BC21C1 /* DocumentView.swift */; };
+		288042CF29347BDA00BC21C1 /* QA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288042CE29347BDA00BC21C1 /* QA.swift */; };
 		28D50D74293166AB007CC76F /* TransformerDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D50D73293166AB007CC76F /* TransformerDemoApp.swift */; };
 		28D50D76293166AB007CC76F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D50D75293166AB007CC76F /* ContentView.swift */; };
 		28D50D78293166AC007CC76F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D50D77293166AC007CC76F /* Assets.xcassets */; };
@@ -35,7 +47,20 @@
 		2880428B29331A4C00BC21C1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		2880428F2933295500BC21C1 /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
 		288042912933308F00BC21C1 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		28804294293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = UpdatableDrawingClassifier.mlmodel; path = ../../../../../Downloads/UpdatableDrawingClassifier.mlmodel; sourceTree = "<group>"; };
+		288042AF2934139200BC21C1 /* UpdatableDrawingClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UpdatableDrawingClassifier.mlmodel; sourceTree = "<group>"; };
+		288042B42934143600BC21C1 /* BERT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERT.swift; sourceTree = "<group>"; };
+		288042B52934143600BC21C1 /* BERTInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTInput.swift; sourceTree = "<group>"; };
+		288042B62934143600BC21C1 /* bert-base-uncased-vocab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "bert-base-uncased-vocab.txt"; sourceTree = "<group>"; };
+		288042B72934143600BC21C1 /* BERTOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTOutput.swift; sourceTree = "<group>"; };
+		288042B82934143600BC21C1 /* BERTVocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BERTVocabulary.swift; sourceTree = "<group>"; };
+		288042B92934143600BC21C1 /* TokenizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizedString.swift; sourceTree = "<group>"; };
+		288042C2293416FD00BC21C1 /* BERTSQUADFP16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BERTSQUADFP16.mlmodel; sourceTree = "<group>"; };
+		288042C429346EBB00BC21C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		288042C52934742A00BC21C1 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		288042C82934747200BC21C1 /* ScannedDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedDocument.swift; sourceTree = "<group>"; };
+		288042CA2934755400BC21C1 /* OCRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRManager.swift; sourceTree = "<group>"; };
+		288042CC29347A5F00BC21C1 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		288042CE29347BDA00BC21C1 /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
 		28D50D70293166AB007CC76F /* TransformerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransformerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D50D73293166AB007CC76F /* TransformerDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformerDemoApp.swift; sourceTree = "<group>"; };
 		28D50D75293166AB007CC76F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +108,7 @@
 			children = (
 				2880428829318DFC00BC21C1 /* MessageManager.swift */,
 				2880428F2933295500BC21C1 /* DrawingManager.swift */,
+				288042CA2934755400BC21C1 /* OCRManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -93,6 +119,27 @@
 				2880428B29331A4C00BC21C1 /* Line.swift */,
 			);
 			path = DrawingPad;
+			sourceTree = "<group>";
+		};
+		288042B32934143600BC21C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				288042B42934143600BC21C1 /* BERT.swift */,
+				288042B52934143600BC21C1 /* BERTInput.swift */,
+				288042B62934143600BC21C1 /* bert-base-uncased-vocab.txt */,
+				288042B72934143600BC21C1 /* BERTOutput.swift */,
+				288042B82934143600BC21C1 /* BERTVocabulary.swift */,
+				288042B92934143600BC21C1 /* TokenizedString.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		288042C72934746600BC21C1 /* QA */ = {
+			isa = PBXGroup;
+			children = (
+				288042C82934747200BC21C1 /* ScannedDocument.swift */,
+			);
+			path = QA;
 			sourceTree = "<group>";
 		};
 		28D50D67293166AB007CC76F = {
@@ -116,6 +163,8 @@
 		28D50D72293166AB007CC76F /* TransformerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				288042C429346EBB00BC21C1 /* Info.plist */,
+				288042B32934143600BC21C1 /* Model */,
 				2880428729318DE700BC21C1 /* Managers */,
 				28D50D9B293180CD007CC76F /* Extensions */,
 				28D50D83293167CD007CC76F /* Components */,
@@ -125,7 +174,8 @@
 				28D50D75293166AB007CC76F /* ContentView.swift */,
 				28D50D77293166AC007CC76F /* Assets.xcassets */,
 				28D50DA229318982007CC76F /* GoogleService-Info.plist */,
-				28804294293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel */,
+				288042AF2934139200BC21C1 /* UpdatableDrawingClassifier.mlmodel */,
+				288042C2293416FD00BC21C1 /* BERTSQUADFP16.mlmodel */,
 				28D50D79293166AC007CC76F /* Preview Content */,
 			);
 			path = TransformerDemo;
@@ -137,6 +187,7 @@
 				28D50D7A293166AC007CC76F /* Preview Assets.xcassets */,
 				28D50D99293177EA007CC76F /* Chat.swift */,
 				28D50DA029318965007CC76F /* GoogleService-Info.plist */,
+				288042CE29347BDA00BC21C1 /* QA.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -144,6 +195,7 @@
 		28D50D81293167BF007CC76F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				288042C72934746600BC21C1 /* QA */,
 				2880428A29331A3C00BC21C1 /* DrawingPad */,
 				28D50D94293176F4007CC76F /* Chat */,
 			);
@@ -189,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				28D50D8C29316B52007CC76F /* QAView.swift */,
+				288042C52934742A00BC21C1 /* ScannerView.swift */,
+				288042CC29347A5F00BC21C1 /* DocumentView.swift */,
 			);
 			path = QA;
 			sourceTree = "<group>";
@@ -291,6 +345,7 @@
 			files = (
 				28D50D7B293166AC007CC76F /* Preview Assets.xcassets in Resources */,
 				28D50D78293166AC007CC76F /* Assets.xcassets in Resources */,
+				288042BC2934143600BC21C1 /* bert-base-uncased-vocab.txt in Resources */,
 				28D50DA129318965007CC76F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,21 +400,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D50D76293166AB007CC76F /* ContentView.swift in Sources */,
+				288042CF29347BDA00BC21C1 /* QA.swift in Sources */,
+				288042BA2934143600BC21C1 /* BERT.swift in Sources */,
 				28D50D87293167F6007CC76F /* ChatView.swift in Sources */,
-				28804295293333F200BC21C1 /* UpdatableDrawingClassifier.mlmodel in Sources */,
 				28D50D74293166AB007CC76F /* TransformerDemoApp.swift in Sources */,
 				28D50D9A293177EA007CC76F /* Chat.swift in Sources */,
 				28D50D8A29316924007CC76F /* DrawingPadView.swift in Sources */,
+				288042CB2934755400BC21C1 /* OCRManager.swift in Sources */,
+				288042CD29347A5F00BC21C1 /* DocumentView.swift in Sources */,
 				288042922933308F00BC21C1 /* UIImage.swift in Sources */,
+				288042BB2934143600BC21C1 /* BERTInput.swift in Sources */,
+				288042BF2934143600BC21C1 /* TokenizedString.swift in Sources */,
+				288042C62934742A00BC21C1 /* ScannerView.swift in Sources */,
 				288042902933295500BC21C1 /* DrawingManager.swift in Sources */,
+				288042C3293416FD00BC21C1 /* BERTSQUADFP16.mlmodel in Sources */,
 				2880428C29331A4C00BC21C1 /* Line.swift in Sources */,
 				28D50D982931778D007CC76F /* MessageBubble.swift in Sources */,
 				2880428929318DFC00BC21C1 /* MessageManager.swift in Sources */,
+				288042B02934139200BC21C1 /* UpdatableDrawingClassifier.mlmodel in Sources */,
 				28D50D9D293180D9007CC76F /* CornerRadius.swift in Sources */,
 				28D50D8D29316B52007CC76F /* QAView.swift in Sources */,
 				28D50D96293176FE007CC76F /* Message.swift in Sources */,
+				288042BE2934143600BC21C1 /* BERTVocabulary.swift in Sources */,
+				288042BD2934143600BC21C1 /* BERTOutput.swift in Sources */,
 				28D50D93293173B9007CC76F /* LoadingView.swift in Sources */,
 				28D50D9F293185B9007CC76F /* MessageField.swift in Sources */,
+				288042C92934747200BC21C1 /* ScannedDocument.swift in Sources */,
 				28D50D9129317261007CC76F /* TitleRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +559,8 @@
 				DEVELOPMENT_TEAM = 8U28AL3VVJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TransformerDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "${PRODUCT_NAME} extracts text from image as context input for BERT.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -524,6 +592,8 @@
 				DEVELOPMENT_TEAM = 8U28AL3VVJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TransformerDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "${PRODUCT_NAME} extracts text from image as context input for BERT.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

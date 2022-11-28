@@ -1,3 +1,5 @@
-# Using Transformer Models on Mobile Devices (IOS)
+# Integrating Transformers into IOS applications
 
-This repository explores several ways of integreating transformers models to SwiftUI.
+This repository explores several ways of integreating transformers models into ios applications using SwiftUI.
+
+

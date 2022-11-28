@@ -1,0 +1,13 @@
+freeze: auto
+
+title: Integrating Transformers into IOS Applications
+author: Qiushi Yan <br /> [qiushiyan/ios-transformers](https://github.com/qiushiyan/ios-transformers)
+
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    date: now
+    scrollable: true
+    slide-number: true
+    code-overflow: wrap
+    chalkboard: true

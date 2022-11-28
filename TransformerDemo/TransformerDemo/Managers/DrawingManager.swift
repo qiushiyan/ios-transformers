@@ -19,8 +19,14 @@ class DrawingManager: ObservableObject {
     func classify(_ img: UIImage) {
         if let buffer = img.toBuffer() {
             let output = try? model.prediction(drawing: buffer)
-            print(output!.labelProbs)
-            result = output?.label
+            if let output = output {
+                print(output.labelProbs)
+                result = output.label
+            }
         }
+    }
+
+    func clearResult() {
+        result = nil
     }
 }
