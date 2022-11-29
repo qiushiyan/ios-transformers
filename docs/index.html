@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.198">
 
   <meta name="author" content="Qiushi Yan   qiushiyan/ios-transformers">
-  <meta name="dcterms.date" content="2022-11-28">
+  <meta name="dcterms.date" content="2022-11-29">
   <title>Integrating Transformers into IOS Applications</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -402,7 +402,7 @@ Qiushi Yan <br> <a href="https://github.com/qiushiyan/ios-transformers">qiushiya
 </div>
 </div>
 
-  <p class="date">11/28/22</p>
+  <p class="date">11/29/22</p>
 </section>
 <section id="why-developing-models-for-mobile-devices" class="slide level2">
 <h2>Why developing models for mobile devices</h2>
@@ -482,9 +482,17 @@ Qiushi Yan <br> <a href="https://github.com/qiushiyan/ios-transformers">qiushiya
 </section>
 <section id="alternative-built-in-model-in-the-client" class="slide level2">
 <h2>Alternative: built-in model in the client</h2>
-<p>Apple provids the <a href="https://developer.apple.com/documentation/coreml"><span class="yellow">Core ML</span></a> framework for transforming common machine learning models into a <code>.mlmodel</code> format that can be built directly into an IOS app’s bundle.</p>
-
-<img data-src="https://files.readme.io/d2229ff-core-ml-tools-front-page.png" class="r-stretch"></section>
+<p>Apple provids the <a href="https://developer.apple.com/documentation/coreml"><span class="yellow">Core ML</span></a> framework for transforming common machine learning models into a <code>.mlmodel</code> format <sup>1</sup> that can be built directly into an IOS app’s bundle.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/coremltools.png" width="504"></p>
+</figure>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>coremltools: <a href="https://coremltools.readme.io/docs" class="uri">https://coremltools.readme.io/docs</a></p></li></ol></aside></section>
 <section id="transforming-bert-into-.mlmodel" class="slide level2">
 <h2>Transforming BERT into <code>.mlmodel</code></h2>
 <div class="code-with-filename">
@@ -510,9 +518,13 @@ Qiushi Yan <br> <a href="https://github.com/qiushiyan/ios-transformers">qiushiya
 <span id="cb3-17"><a href="#cb3-17"></a>mlmodel.save(<span class="st">"distilbert.mlmodel"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment fade-up">
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="images/bert.png" width="126"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -524,6 +536,7 @@ Qiushi Yan <br> <a href="https://github.com/qiushiyan/ios-transformers">qiushiya
 
 </div>
 </section>
+
     </div>
   </div>
 

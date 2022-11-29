@@ -79,10 +79,14 @@ AF.request("http://localhost:8000/chat", method: .post).responseData { response 
 
 ## Alternative: built-in model in the client
 
-Apple provids the [[Core ML]{.yellow}](https://developer.apple.com/documentation/coreml) framework for transforming common machine learning models into a `.mlmodel` format that can be built directly into an IOS app's bundle.
+Apple provids the [[Core ML]{.yellow}](https://developer.apple.com/documentation/coreml) framework for transforming common machine learning models into a `.mlmodel` format ^[coremltools: <https://coremltools.readme.io/docs>] that can be built directly into an IOS app's bundle.
 
-![](https://files.readme.io/d2229ff-core-ml-tools-front-page.png)
 
+
+```{r}
+#| fig-align: center
+knitr::include_graphics("images/coremltools.png")
+```
 
 ## Transforming BERT into `.mlmodel`
 
@@ -109,6 +113,7 @@ mlmodel.save("distilbert.mlmodel")
 
 ::: {.fragment .fade-up}
 ```{r}
+#| fig-align: center
 knitr::include_graphics("images/bert.png")
 ```
 :::
