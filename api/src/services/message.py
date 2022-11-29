@@ -21,7 +21,7 @@ class MessageService:
     def __init__(self, db: firestore.Client):
         self.db = db
         self.collection = db.collection("messages")
-        self.model = "text-davinci-002"
+        self.model = "text-davinci-003"
         self.callback_done = threading.Event()
         self.messages = self.get_messages(self.collection.stream())
         self.collection.on_snapshot(self.on_snapshot)

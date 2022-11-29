@@ -1,5 +1,3 @@
-from time import time
-
 from fastapi import APIRouter
 
 from src.firebase import db

@@ -27,7 +27,6 @@ Depending on where the model is:
 :::
 ::::
 
-
 ## Making API requests
 
 [Python API Server]{.yellow}
@@ -55,7 +54,6 @@ def gpt3_reply(prompt: str):
     return {"text": reply}
 ```
 
-
 [IOS app]{.yellow}
 
 ```{.swift filename="client.swift"}
@@ -68,7 +66,7 @@ AF.request("http://localhost:8000/chat", method: .post).responseData { response 
 
 [Pros]{.yellow}
 
-- Easy to implement and reason about
+- Easy to implement and reason about, built-in support on many platforms (e.g. [huggingface](https://huggingface.co/inference-api), [replicate](https://replicate.com/docs/reference/http))
 
 - Universal to any language, frameworks and models
 
