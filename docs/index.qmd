@@ -81,11 +81,16 @@ AF.request("http://localhost:8000/chat", method: .post).responseData { response 
 
 Apple provids the [[Core ML]{.yellow}](https://developer.apple.com/documentation/coreml) framework for transforming common machine learning models into a `.mlmodel` format ^[coremltools: <https://coremltools.readme.io/docs>] that can be built directly into an IOS app's bundle.
 
-
-
 ```{r}
 #| fig-align: center
 knitr::include_graphics("images/coremltools.png")
+```
+
+## Model card
+
+```{r}
+#| fig-align: center
+knitr::include_graphics("images/card.png")
 ```
 
 ## Transforming BERT into `.mlmodel`
@@ -120,12 +125,18 @@ knitr::include_graphics("images/bert.png")
 
 ## Demo: client-based Q&A system using BERT
 
-
 ```{r}
 #| fig-align: center
 knitr::include_graphics("images/QA.png")
 ```
 
+## Critical analysis
+
+Future directions
+
+- Online methods: model updates on the fly
+
+- A more streamlined process of model transformation
 
 
 
