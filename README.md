@@ -9,8 +9,11 @@ Chatbot using the traditional server-client approach, with a listening RESTful A
 
 ![](https://raw.githubusercontent.com/qiushiyan/ios-transformers/main/docs/images/gpt3.png)
 
+
 ## Question Answering
 
 QA app with a CoreML model directly built into the bundle, converted from DistillBert. Users can first scan arbitrary text and then ask questions.
+
+![](https://raw.githubusercontent.com/qiushiyan/ios-transformers/main/docs/images/QA.png)
 
 ![](https://raw.githubusercontent.com/qiushiyan/ios-transformers/main/docs/images/QA.png)
